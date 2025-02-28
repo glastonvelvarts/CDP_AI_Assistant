@@ -4,19 +4,24 @@ import psycopg2  # Using PostgreSQL for NeonDB
 from bs4 import BeautifulSoup
 import requests
 import json
+import os
+from dotenv import load_dotenv
 
+# Load environment variables
+load_dotenv()
+
+# Use variables
+API_KEY = os.getenv("API_KEY")
+DB_URL = os.getenv("DB_URL")
 # Initialize Flask App
 app = Flask(__name__)
 from flask_cors import CORS
 CORS(app)
 
-# Initialize Gemini API
-API_KEY = "AIzaSyB29x0B3-9YibR_iAJAQu1gX0M9FGfT75Y"
 genai.configure(api_key=API_KEY)
 model = genai.GenerativeModel("gemini-1.5-flash")
 
 # Initialize PostgreSQL (NeonDB)
-DB_URL = "postgresql://Chatbot_owner:npg_cYblLD4AeR1I@ep-old-unit-a1educ17-pooler.ap-southeast-1.aws.neon.tech/Chatbot?sslmode=require"
 db_conn = psycopg2.connect(DB_URL)
 db_cursor = db_conn.cursor()
 
