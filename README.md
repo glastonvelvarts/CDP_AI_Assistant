@@ -42,7 +42,7 @@ CDP Chatbot is an AI-powered assistant designed to help users with customer data
    ```
 
 ## Frontend Preview
-![Frontend Preview](images/image.png)
+![Frontend Preview](image/image.jpg)
 
 ## API Endpoints
 - `GET /ask?q=<query>` - Returns AI-generated answers for CDP-related queries.
