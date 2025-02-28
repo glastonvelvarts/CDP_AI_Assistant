@@ -1,4 +1,4 @@
-# CDP Chatbot
+# DataMind
 
 ## Overview
 CDP Chatbot is an AI-powered assistant designed to help users with customer data platform (CDP) queries. It integrates Gemini AI for NLP processing and uses PostgreSQL (NeonDB) to store documentation data.
